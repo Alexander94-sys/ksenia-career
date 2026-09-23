@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ксения Андреева — карьерный консультант | Разберём, куда вам двигаться и как найти работу</title>
+    <meta name="description" content="Ксения Андреева — карьерный консультант. Помогу разобраться в карьерной ситуации, определить сильные стороны, сменить профессию, найти удалённую работу или выйти на новый доход.">
+    <meta name="keywords" content="Ксения Андреева, карьерный консультант, смена профессии, резюме, поиск работы, собеседование">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://k2hrevolution.ru/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ксения Андреева — карьерный консультант">
+    <meta property="og:description" content="Помогу найти работу, которая подходит именно вам.">
+    <meta property="og:url" content="https://k2hrevolution.ru/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Ксения Андреева — карьерный консультант",
+        "telephone": "+79679075335",
+        "email": "ksenia@k2hrevo.ru",
+        "address": { "@type": "PostalAddress", "addressLocality": "Екатеринбург", "addressCountry": "RU" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --emerald: #2E8B57;
+            --emerald-dark: #1E5E3A;
+            --orange: #FF7F50;
+            --orange-light: #FFA07A;
+            --white: #FFFFFF;
+            --off-white: #F9F9F9;
+            --text-dark: #2E2E2E;
+            --text-grey: #6B6B6B;
+            --glass-bg: rgba(255, 255, 255, 0.72);
+            --glass-border: rgba(46, 139, 87, 0.18);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --radius: 16px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Cormorant', serif;
+            font-weight: 600;
+            color: var(--emerald-dark);
+        }
+        a { color: var(--emerald); text-decoration: none; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2; }
+
+        /* ===== ФИКСИРОВАННЫЙ ФОН: градиент + листья ===== */
+        .forest-bg {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .forest-bg svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Падение листьев */
+        .leaf-fall {
+            animation: leafFall var(--dur, 18s) linear infinite;
+            animation-delay: var(--delay, 0s);
+            transform-origin: center;
+        }
+        @keyframes leafFall {
+            0% {
+                transform: translateY(-80px) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% {
+                transform: translateY(1150px) translateX(60px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Вращение и покачивание листа внутри группы */
+        .leaf-rotate {
+            transform-origin: center;
+            animation: leafSway 4s ease-in-out infinite;
+        }
+        @keyframes leafSway {
+            0%, 100% { transform: rotate(-15deg) scale(1); }
+            50% { transform: rotate(15deg) scale(1.05); }
+        }
+
+        /* Светлячки */
+        .firefly {
+            animation: fireflyPulse 4s ease-in-out infinite;
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+        .firefly:nth-child(odd) { animation-duration: 5s; animation-delay: 1s; }
+        .firefly:nth-child(3n) { animation-duration: 6s; animation-delay: 2s; }
+
+        @keyframes fireflyPulse {
+            0%, 100% { opacity: 0.3; transform: scale(0.7); }
+            50% { opacity: 1; transform: scale(1.4); }
+        }
+
+        .header, .hero, .section, .footer, .cta, .modal {
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 900px) { .forest-bg { opacity: 0.65; } }
+        @media (max-width: 600px) { .forest-bg { opacity: 0.45; } }
+
+        /* Scroll-анимации */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        .animate-delay-1 { transition-delay: 0.1s; }
+        .animate-delay-2 { transition-delay: 0.2s; }
+        .animate-delay-3 { transition-delay: 0.3s; }
+
+        /* Шапка */
+        .header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(249, 249, 249, 0.78);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 0;
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo {
+            font-family: 'Cormorant', serif;
+            font-size: 1.4rem; font-weight: 700;
+            color: var(--emerald-dark); line-height: 1.2;
+        }
+        .logo span { color: var(--orange); }
+        .nav-desktop { display: flex; gap: 2rem; font-size: 0.95rem; }
+        .nav-desktop a { color: var(--text-dark); transition: color 0.3s; font-weight: 500; }
+        .nav-desktop a:hover { color: var(--orange); }
+        .burger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .burger span { display: block; width: 25px; height: 2px; background: var(--emerald-dark); }
+        .burger-menu {
+            position: fixed; top: 0; left: -100%; width: 80%; max-width: 320px; height: 100vh;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            padding: 40px 20px; transition: left 0.3s ease; z-index: 200;
+            border-right: 1px solid var(--glass-border);
+        }
+        .burger-menu.open { left: 0; }
+        .burger-menu ul { list-style: none; display: flex; flex-direction: column; gap: 1.8rem; }
+        .burger-menu a { color: var(--text-dark); font-size: 1.2rem; font-family: 'Cormorant', serif; font-weight: 600; }
+
+        /* Hero */
+        .hero {
+            padding: 5rem 0 4rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.35) 100%);
+            text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
+        .hero h1 span { color: var(--orange); }
+        .hero p { max-width: 700px; margin: 0 auto 2rem; font-size: 1.15rem; color: var(--text-grey); }
+        .about-photo { display: flex; justify-content: center; margin: 3rem auto 0; }
+        .about-photo img {
+            width: 220px; height: 220px;
+            border-radius: 50%; object-fit: cover;
+            border: 4px solid var(--orange);
+            box-shadow: 0 10px 30px rgba(255, 127, 80, 0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+            color: #fff; padding: 0.8rem 2rem;
+            border-radius: 50px; font-weight: 600;
+            border: none; cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(46, 139, 87, 0.3); }
+
+        .section { padding: 4rem 0; }
+        .section-title { font-size: 2.2rem; text-align: center; margin-bottom: 2.5rem; }
+        .section-subtitle { text-align: center; color: var(--text-grey); max-width: 700px; margin: -1.5rem auto 2.5rem; font-size: 1.05rem; }
+
+        /* Полупрозрачные секции */
+        .section-light {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+        .section-transparent {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.8rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .glass-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(46, 139, 87, 0.18); }
+        .glass-card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+        .glass-card p { color: var(--text-grey); font-size: 0.95rem; }
+        .glass-card ul { list-style: none; margin-top: 1rem; }
+        .glass-card ul li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-grey); font-size: 0.95rem; }
+        .glass-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--emerald); font-weight: 700; }
+
+        .pain-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto; }
+        .pain-item {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            padding: 1rem 1.5rem;
+            border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            color: var(--text-grey); font-style: italic;
+            border-left: 4px solid var(--orange);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .pain-item:hover { transform: translateX(5px); border-color: var(--emerald); }
+
+        /* Форматы работы — карточки с неоном */
+        .format-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .format-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem; cursor: pointer;
+            transition: all 0.4s ease; border: 2px solid transparent;
+            min-height: 220px; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .format-card h3 { font-size: 1.4rem; margin: 0; }
+        .format-card .format-details {
+            opacity: 0; max-height: 0; overflow: hidden;
+            transition: opacity 0.4s ease, max-height 0.4s ease, margin 0.4s ease;
+            color: var(--text-grey); font-size: 0.9rem; margin-top: 0;
+        }
+        .format-card .format-details .price {
+            font-size: 1.6rem; font-weight: 700; color: var(--orange);
+            margin-top: 0.8rem; display: block; font-family: 'Cormorant', serif;
+        }
+        .format-card:hover .format-details { opacity: 1; max-height: 250px; margin-top: 1rem; }
+        .format-card:hover { border-color: var(--orange); animation: neonPulse 1.8s ease-in-out infinite; }
+        @keyframes neonPulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 127, 80, 0.35), 0 0 25px rgba(255, 127, 80, 0.15); }
+            50% { box-shadow: 0 0 22px rgba(255, 127, 80, 0.75), 0 0 50px rgba(255, 127, 80, 0.35); }
+        }
+
+        /* Искры в блоке "Кому подойдёт" */
+        .spark {
+            color: var(--orange); font-size: 1.2rem; margin-right: 0.4rem;
+            display: inline-block; animation: sparkle 3s ease-in-out infinite;
+            text-shadow: 0 0 8px rgba(255, 127, 80, 0.6);
+        }
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1.15) rotate(10deg); opacity: 0.85; }
+        }
+
+        #for-whom .glass-card {
+            border: 1px solid rgba(46, 139, 87, 0.15);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        #for-whom .glass-card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 10px 30px rgba(255, 127, 80, 0.18);
+        }
+        #for-whom .glass-card p {
+            font-family: 'Cormorant', serif; font-size: 1.15rem;
+            color: var(--emerald-dark); font-weight: 600;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, rgba(46, 139, 87, 0.95) 0%, rgba(30, 94, 58, 0.95) 100%);
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            color: #fff; text-align: center;
+            padding: 4rem 0; border-radius: var(--radius); margin: 2rem 0;
+        }
+        .cta h2 { color: #fff; font-size: 2rem; margin-bottom: 1rem; }
+        .cta p { max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }
+        .cta .btn { background: var(--orange); color: #fff; }
+        .cta .btn:hover { background: var(--orange-light); }
+
+        .form-container {
+            max-width: 600px; margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            padding: 2.5rem; border-radius: var(--radius); box-shadow: var(--shadow);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-dark); }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 0.9rem;
+            border: 1px solid #ddd; border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            font-family: 'Montserrat', sans-serif; font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--emerald); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+
+        .footer {
+            background: rgba(46, 46, 46, 0.94);
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            color: #fff; padding: 3rem 0 1.5rem; margin-top: 3rem;
+        }
+        .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+        .footer h4 { font-family: 'Cormorant', serif; font-size: 1.3rem; margin-bottom: 1rem; color: var(--orange); }
+        .footer a { color: #ccc; display: block; margin-bottom: 0.5rem; transition: color 0.3s; }
+        .footer a:hover { color: var(--orange); }
+        .footer-bottom { text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 0.85rem; }
+
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(6px); z-index: 500; justify-content: center; align-items: center; padding: 20px; }
+        .modal.open { display: flex; }
+        .modal-content { background: #fff; border-radius: var(--radius); padding: 2.5rem 2rem; max-width: 480px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: modalIn 0.35s ease; }
+        @keyframes modalIn { from { opacity: 0; transform: translateY(30px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.8rem; color: var(--text-grey); cursor: pointer; }
+        .modal-close:hover { color: var(--orange); }
+        .modal-content h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .modal-content h3 span { color: var(--orange); }
+
+        @media (max-width: 768px) {
+            .burger { display: flex; }
+            .nav-desktop { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+            .cta h2 { font-size: 1.6rem; }
+            .about-photo img { width: 160px; height: 160px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====== ФИКСИРОВАННЫЙ ФОН: градиент + летящие листья ====== -->
+<div class="forest-bg" aria-hidden="true">
+    <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="bgGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="35%" stop-color="#F4FBF6"/>
+                <stop offset="65%" stop-color="#D6EFE0"/>
+                <stop offset="100%" stop-color="#A8DDBE"/>
+            </linearGradient>
+
+            <radialGradient id="leafGreen" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#5FC58A"/>
+                <stop offset="100%" stop-color="#2E8B57"/>
+            </radialGradient>
+            <radialGradient id="leafOrange" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFB088"/>
+                <stop offset="100%" stop-color="#FF7F50"/>
+            </radialGradient>
+            <radialGradient id="leafGold" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#F4D58A"/>
+                <stop offset="100%" stop-color="#D4A94A"/>
+            </radialGradient>
+
+            <symbol id="leafShape" viewBox="-15 -25 30 50">
+                <path d="M0,-25 Q12,-15 10,0 Q8,12 0,20 Q-8,12 -10,0 Q-12,-15 0,-25 Z"/>
+                <path d="M0,-20 L0,18" stroke="rgba(0,0,0,0.15)" stroke-width="1" fill="none"/>
+                <path d="M0,-10 L6,-13 M0,-3 L7,-6 M0,4 L6,1 M0,11 L5,8" stroke="rgba(0,0,0,0.12)" stroke-width="0.8" fill="none"/>
+                <path d="M0,-10 L-6,-13 M0,-3 L-7,-6 M0,4 L-6,1 M0,11 L-5,8" stroke="rgba(0,0,0,0.12)" stroke-width="0.8" fill="none"/>
+            </symbol>
+        </defs>
+
+        <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+
+        <ellipse cx="1700" cy="200" rx="500" ry="400" fill="#7FD9A4" opacity="0.15"/>
+        <ellipse cx="1500" cy="400" rx="350" ry="280" fill="#5FC58A" opacity="0.1"/>
+
+        <!-- Верхний слой листьев -->
+        <g class="leaf-fall" style="--dur: 14s; --delay: 0s;">
+            <use href="#leafShape" x="200" y="-50" width="34" height="56" fill="url(#leafGreen)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 16s; --delay: 3s;">
+            <use href="#leafShape" x="600" y="-50" width="40" height="66" fill="url(#leafOrange)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 18s; --delay: 6s;">
+            <use href="#leafShape" x="1100" y="-50" width="36" height="60" fill="url(#leafGold)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 15s; --delay: 9s;">
+            <use href="#leafShape" x="1500" y="-50" width="42" height="70" fill="url(#leafGreen)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 17s; --delay: 12s;">
+            <use href="#leafShape" x="1750" y="-50" width="36" height="60" fill="url(#leafOrange)" class="leaf-rotate"/>
+        </g>
+
+        <!-- Средний слой -->
+        <g class="leaf-fall" style="--dur: 20s; --delay: 2s;">
+            <use href="#leafShape" x="350" y="-50" width="28" height="46" fill="url(#leafGold)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 22s; --delay: 5s;">
+            <use href="#leafShape" x="850" y="-50" width="32" height="52" fill="url(#leafGreen)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 19s; --delay: 8s;">
+            <use href="#leafShape" x="1300" y="-50" width="30" height="50" fill="url(#leafOrange)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 21s; --delay: 11s;">
+            <use href="#leafShape" x="1650" y="-50" width="28" height="46" fill="url(#leafGold)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 23s; --delay: 14s;">
+            <use href="#leafShape" x="100" y="-50" width="30" height="50" fill="url(#leafGreen)" class="leaf-rotate"/>
+        </g>
+
+        <!-- Нижний слой (мелкие) -->
+        <g class="leaf-fall" style="--dur: 26s; --delay: 1s;">
+            <use href="#leafShape" x="500" y="-50" width="22" height="36" fill="url(#leafGold)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 28s; --delay: 4s;">
+            <use href="#leafShape" x="950" y="-50" width="24" height="40" fill="url(#leafGreen)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 25s; --delay: 7s;">
+            <use href="#leafShape" x="1400" y="-50" width="22" height="36" fill="url(#leafOrange)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 27s; --delay: 10s;">
+            <use href="#leafShape" x="1820" y="-50" width="24" height="40" fill="url(#leafGold)" class="leaf-rotate"/>
+        </g>
+        <g class="leaf-fall" style="--dur: 29s; --delay: 13s;">
+            <use href="#leafShape" x="750" y="-50" width="22" height="36" fill="url(#leafGreen)" class="leaf-rotate"/>
+        </g>
+
+        <!-- Светлячки -->
+        <g>
+            <circle class="firefly" cx="400" cy="700" r="5" fill="#FFB088"/>
+            <circle class="firefly" cx="800" cy="500" r="6" fill="#FFB088"/>
+            <circle class="firefly" cx="1200" cy="650" r="5" fill="#FFB088"/>
+            <circle class="firefly" cx="1600" cy="450" r="6" fill="#FFB088"/>
+            <circle class="firefly" cx="1000" cy="850" r="4" fill="#FFB088"/>
+            <circle class="firefly" cx="1450" cy="750" r="5" fill="#FFB088"/>
+        </g>
+    </svg>
+</div>
+
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">Ксения Андреева<br><span>Карьерный консультант</span></div>
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-desktop">
+            <a href="#services">Что мы сделаем</a>
+            <a href="#formats">Форматы работы</a>
+            <a href="#for-whom">Кому подойдёт</a>
+            <a href="#contact">Записаться</a>
+        </nav>
+    </div>
+</header>
+
+<nav class="burger-menu" id="burgerMenu">
+    <ul>
+        <li><a href="#services">Что мы сделаем</a></li>
+        <li><a href="#formats">Форматы работы</a></li>
+        <li><a href="#for-whom">Кому подойдёт</a></li>
+        <li><a href="#contact">Записаться</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1 class="animate-on-scroll">Разберём, <span>КУДА</span> вам двигаться<br>и <span>КАК</span> найти работу</h1>
+        <p class="animate-on-scroll animate-delay-1">Не знаете, какую работу искать? Хотите сменить профессию, увеличить доход или наконец найти работу, которая вам подходит? Помогу разобраться в вашей карьерной ситуации, определить сильные стороны и упаковать опыт в резюме, которое работает.</p>
+        <div class="about-photo animate-on-scroll animate-delay-2">
+            <img src="ksenia.jpg" alt="Ксения Андреева — карьерный консультант">
+        </div>
+        <div style="margin-top: 2rem;">
+            <a href="#contact" class="btn animate-on-scroll animate-delay-3">Записаться на разбор</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Возможно, вы сейчас в одной из этих точек</h2>
+        <div class="pain-list">
+            <div class="pain-item animate-on-scroll">«Я больше не хочу работать там, где работаю»</div>
+            <div class="pain-item animate-on-scroll animate-delay-1">«Хочу сменить профессию, но не понимаю, на что»</div>
+            <div class="pain-item animate-on-scroll animate-delay-2">«Хочу в IT / digital / управление, но у меня нет опыта»</div>
+            <div class="pain-item animate-on-scroll">«Хочу удалённую работу»</div>
+            <div class="pain-item animate-on-scroll animate-delay-1">«У меня большой опыт, но хорошей работы найти не получается»</div>
+            <div class="pain-item animate-on-scroll animate-delay-2">«Откликаюсь на вакансии, а мне не отвечают»</div>
+            <div class="pain-item animate-on-scroll">«На собеседования хожу, но офферов нет»</div>
+            <div class="pain-item animate-on-scroll animate-delay-1">«Хочу больше зарабатывать, но не понимаю, как перейти на следующий уровень»</div>
+            <div class="pain-item animate-on-scroll animate-delay-2">«Я вообще не понимаю, в чём моя профессиональная сила»</div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-transparent" id="services">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Что мы сделаем</h2>
+        <div class="cards-grid">
+            <div class="glass-card animate-on-scroll">
+                <h3>1. Разберём ВАС</h3>
+                <p>Не только должности из резюме, а:</p>
+                <ul>
+                    <li>сильные стороны;</li>
+                    <li>профессиональные способности;</li>
+                    <li>компетенции;</li>
+                    <li>опыт и достижения;</li>
+                    <li>интересы и мотивацию;</li>
+                    <li>предпочтительный формат работы;</li>
+                    <li>типы задач, в которых вы эффективны.</li>
+                </ul>
+            </div>
+            <div class="glass-card animate-on-scroll animate-delay-1">
+                <h3>2. Определим КУДА двигаться</h3>
+                <p>Сформируем конкретные карьерные варианты: должности → сферы → роли → требования → что уже есть → чего не хватает.</p>
+                <p>Если хотите сменить профессию, посмотрим, какой опыт можно перенести, чтобы не начинать с нуля.</p>
+            </div>
+            <div class="glass-card animate-on-scroll animate-delay-2">
+                <h3>3. Выстроим карьерную стратегию</h3>
+                <p>Определим:</p>
+                <ul>
+                    <li>какие вакансии вам подходят;</li>
+                    <li>на какие не стоит тратить время;</li>
+                    <li>как искать работу;</li>
+                    <li>как позиционировать себя;</li>
+                    <li>какие компетенции усилить;</li>
+                    <li>как выйти на следующий уровень дохода.</li>
+                </ul>
+            </div>
+            <div class="glass-card animate-on-scroll">
+                <h3>4. Сделаем резюме, которое ПРОДАЁТ</h3>
+                <p>Не просто красивый шаблон. Сначала определяем карьерную цель, а затем создаём резюме под неё.</p>
+                <p>Покажем работодателю: кто вы → чем сильны → каких результатов достигали → какую ценность можете дать.</p>
+            </div>
+            <div class="glass-card animate-on-scroll animate-delay-1">
+                <h3>5. Подготовимся к собеседованию</h3>
+                <p>Разберём:</p>
+                <ul>
+                    <li>самопрезентацию;</li>
+                    <li>сложные вопросы;</li>
+                    <li>зарплатные ожидания;</li>
+                    <li>причины увольнения;</li>
+                    <li>смену профессии;</li>
+                    <li>отсутствие опыта в новой сфере.</li>
+                </ul>
+                <p>Можем провести тренировочное собеседование.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Почему я работаю не только с резюме</h2>
+        <p class="section-subtitle animate-on-scroll">Потому что резюме — это инструмент, а не карьерная стратегия. Можно сделать идеальное резюме и всё равно искать не ту работу.</p>
+        <p class="section-subtitle animate-on-scroll animate-delay-1">Поэтому сначала мы отвечаем на главный вопрос: <strong>«Куда вам действительно стоит двигаться?»</strong> И только после этого решаем, как представить вас работодателю.</p>
+        <p class="section-subtitle animate-on-scroll animate-delay-2">Я работаю не по шаблону и не обещаю волшебную вакансию за неделю. Моя задача — помочь вам увидеть ваши реальные профессиональные возможности, выбрать наиболее подходящий путь и грамотно выйти с ним на рынок труда.</p>
+    </div>
+</section>
+
+<section class="section section-transparent" id="formats">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Форматы работы</h2>
+        <p class="section-subtitle animate-on-scroll">Наведите на карточку, чтобы увидеть детали. Нажмите, чтобы записаться.</p>
+        <div class="format-grid">
+            <div class="format-card animate-on-scroll" data-format="Экспресс-разбор">
+                <h3>Экспресс-разбор</h3>
+                <div class="format-details">
+                    <p>Если нужно быстро разобраться с конкретным карьерным вопросом.</p>
+                    <span class="price">от 7 000 ₽</span>
+                </div>
+            </div>
+            <div class="format-card animate-on-scroll animate-delay-1" data-format="Глубокий карьерный разбор">
+                <h3>Глубокий карьерный разбор</h3>
+                <div class="format-details">
+                    <p>Анализ опыта, сильных сторон, карьерных направлений и рекомендаций по дальнейшему движению.</p>
+                    <span class="price">от 12 000 ₽</span>
+                </div>
+            </div>
+            <div class="format-card animate-on-scroll animate-delay-2" data-format="Карьерный разбор + резюме">
+                <h3>Карьерный разбор + резюме</h3>
+                <div class="format-details">
+                    <p>Разбираем карьерную цель и создаём резюме под неё.</p>
+                    <span class="price">от 15 000 ₽</span>
+                </div>
+            </div>
+            <div class="format-card animate-on-scroll animate-delay-3" data-format="Комплексная карьерная стратегия">
+                <h3>Комплексная карьерная стратегия</h3>
+                <div class="format-details">
+                    <p>Карьерный анализ + позиционирование + резюме + стратегия поиска + подготовка к собеседованиям.</p>
+                    <span class="price">от 20 000 ₽</span>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 1.5rem; color: var(--text-grey); font-style: italic;" class="animate-on-scroll">Стоимость определяется после понимания вашей задачи.</p>
+    </div>
+</section>
+
+<section class="section section-light" id="for-whom">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Кому особенно подойдёт</h2>
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+            <div class="glass-card animate-on-scroll" style="text-align: center;"><p><span class="spark">✦</span> сменить профессию</p></div>
+            <div class="glass-card animate-on-scroll animate-delay-1" style="text-align: center;"><p><span class="spark">✦</span> сменить сферу</p></div>
+            <div class="glass-card animate-on-scroll animate-delay-2" style="text-align: center;"><p><span class="spark">✦</span> перейти в IT / digital</p></div>
+            <div class="glass-card animate-on-scroll" style="text-align: center;"><p><span class="spark">✦</span> найти удалённую работу</p></div>
+            <div class="glass-card animate-on-scroll animate-delay-1" style="text-align: center;"><p><span class="spark">✦</span> выйти на более высокий доход</p></div>
+            <div class="glass-card animate-on-scroll animate-delay-2" style="text-align: center;"><p><span class="spark">✦</span> получить повышение</p></div>
+            <div class="glass-card animate-on-scroll" style="text-align: center;"><p><span class="spark">✦</span> вернуться на рынок труда</p></div>
+            <div class="glass-card animate-on-scroll animate-delay-1" style="text-align: center;"><p><span class="spark">✦</span> понять своё профессиональное направление</p></div>
+            <div class="glass-card animate-on-scroll animate-delay-2" style="text-align: center;"><p><span class="spark">✦</span> найти работу после увольнения</p></div>
+            <div class="glass-card animate-on-scroll" style="text-align: center;"><p><span class="spark">✦</span> перестать отправлять резюме «в никуда»</p></div>
+            <div class="glass-card animate-on-scroll animate-delay-1" style="text-align: center;"><p><span class="spark">✦</span> уверенно проходить собеседования</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="cta animate-on-scroll">
+        <h2>Готовы разобраться в своей карьере?</h2>
+        <p>Запишитесь на консультацию, и мы вместе найдём направление, которое подходит именно вам.</p>
+        <a href="#contact" class="btn">Записаться</a>
+    </div>
+</section>
+
+<section class="section section-transparent" id="contact">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Записаться на консультацию</h2>
+        <div class="form-container animate-on-scroll">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" id="name" required placeholder="Как к вам обращаться">
+                </div>
+                <div class="form-group">
+                    <label>Телефон *</label>
+                    <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label>Кратко опишите вашу ситуацию</label>
+                    <textarea id="message" placeholder="Например: хочу сменить профессию, не знаю, с чего начать..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div>
+                <h4>Ксения Андреева</h4>
+                <p style="color: #aaa; font-size: 0.9rem;">Карьерный консультант. Помогаю найти работу, которая подходит именно вам.</p>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <a href="tel:+79679075335">+7 967 907-53-35</a>
+                <a href="mailto:ksenia@k2hrevo.ru">ksenia@k2hrevo.ru</a>
+            </div>
+            <div>
+                <h4>Разделы</h4>
+                <a href="#services">Что мы сделаем</a>
+                <a href="#formats">Форматы работы</a>
+                <a href="#for-whom">Кому подойдёт</a>
+                <a href="#contact">Записаться</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Ксения Андреева | Карьерный консультант. Все права защищены.</div>
+    </div>
+</footer>
+
+<div class="modal" id="formatModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeFormatModal()">&times;</button>
+        <h3>Заявка на <span id="modalFormatName"></span></h3>
+        <form id="formatForm">
+            <div class="form-group">
+                <label>Ваше имя *</label>
+                <input type="text" id="modalName" required placeholder="Как к вам обращаться">
+            </div>
+            <div class="form-group">
+                <label>Телефон *</label>
+                <input type="tel" id="modalPhone" required placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="form-group">
+                <label>Цель запроса</label>
+                <input type="text" id="modalGoal" readonly style="background: #f5f5f5; color: var(--emerald-dark); font-weight: 600;">
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const burgerMenu = document.getElementById('burgerMenu');
+    burgerBtn.addEventListener('click', () => burgerMenu.classList.toggle('open'));
+    burgerMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => burgerMenu.classList.remove('open'));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    const formatModal = document.getElementById('formatModal');
+    const modalFormatName = document.getElementById('modalFormatName');
+    const modalGoal = document.getElementById('modalGoal');
+
+    document.querySelectorAll('.format-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const formatName = card.getAttribute('data-format');
+            modalFormatName.textContent = formatName;
+            modalGoal.value = formatName;
+            formatModal.classList.add('open');
+        });
+    });
+
+    function closeFormatModal() { formatModal.classList.remove('open'); }
+
+    formatModal.addEventListener('click', (e) => {
+        if (e.target === formatModal) closeFormatModal();
+    });
+
+    document.getElementById('formatForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('modalName').value;
+        const phone = document.getElementById('modalPhone').value;
+        const goal = document.getElementById('modalGoal').value;
+        alert(`Спасибо, ${name}! Заявка на «${goal}» принята. Ксения свяжется с вами по номеру ${phone}.`);
+        this.reset();
+        closeFormatModal();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Спасибо! Ваша заявка отправлена. Ксения свяжется с вами в ближайшее время.');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
