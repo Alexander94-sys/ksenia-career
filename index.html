@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ксения Андреева — карьерный консультант | Разберём, куда вам двигаться и как найти работу</title>
     <meta name="description" content="Ксения Андреева — карьерный консультант. Помогу разобраться в карьерной ситуации, определить сильные стороны, сменить профессию, найти удалённую работу или выйти на новый доход. Онлайн по всей России.">
-    <meta name="keywords" content="карьерный консультант, карьерный коуч, смена профессии, карьерная стратегия, резюме, поиск работы, собеседование, удалённая работа, карьерный разбор, консультация по карьере, помощь в трудоустройстве, Екатеринбург, Москва, Санкт-Петербург, Новосибирск, Казань, Россия, онлайн, карьерный рост, смена сферы, переход в IT, резюме под вакансию, подготовка к собеседованию, карьерный путь, профессиональное развитие">
+    <meta name="keywords" content="карьерный консультант, карьерный коуч, смена профессии, карьерная стратегия, резюме, поиск работы, собеседование, удалённая работа, карьерный разбор, консультация по карьере, помощь в трудоустройстве, Екатеринбург, Москва, Санкт-Петербург, Новосибирск, Казань, Россия, онлайн, карьерный рост, смена сферы, переход в IT, резюме под вакансию, подготовка к собеседованию">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Ксения Андреева">
     <meta name="geo.region" content="RU">
@@ -66,10 +66,10 @@
             --radius: 16px;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; background: var(--off-white); }
         body {
             font-family: 'Montserrat', sans-serif;
-            background: var(--off-white);
+            background: transparent;
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -124,10 +124,7 @@
             50% { opacity: 1; transform: scale(1.4); }
         }
 
-        .header, .hero, .section, .footer, .cta, .modal {
-            position: relative;
-            z-index: 2;
-        }
+        .header, .hero, .section, .footer, .cta, .modal { position: relative; z-index: 2; }
 
         @media (max-width: 900px) { .forest-bg { opacity: 0.65; } }
         @media (max-width: 600px) { .forest-bg { opacity: 0.45; } }
@@ -178,7 +175,7 @@
         /* Hero */
         .hero {
             padding: 5rem 0 4rem;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.35) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
             text-align: center;
         }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
@@ -209,14 +206,14 @@
         }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(46, 139, 87, 0.3); }
 
-        .section { padding: 4rem 0; }
+        .section { padding: 4rem 0; background: transparent; }
         .section-title { font-size: 2.2rem; text-align: center; margin-bottom: 2.5rem; }
         .section-subtitle {
             text-align: center; color: var(--text-grey);
             max-width: 700px; margin: -1.5rem auto 2.5rem; font-size: 1.05rem;
         }
 
-        /* Полупрозрачные секции, чтобы фон просвечивал */
+        /* Полупрозрачные секции */
         .section-light {
             background: rgba(255, 255, 255, 0.55);
             backdrop-filter: blur(6px);
@@ -260,7 +257,7 @@
             .pain-item:last-child { max-width: 100%; }
         }
 
-        /* Карточки — общий стиль */
+        /* Карточки */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
@@ -280,7 +277,7 @@
         }
         .glass-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--emerald); font-weight: 700; }
 
-        /* Раскладка «Что мы сделаем»: слева 2×2, справа карточка 5 */
+        /* Раскладка «Что мы сделаем» */
         .services-layout {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -307,7 +304,7 @@
             .services-grid-2x2 { grid-template-columns: 1fr; }
         }
 
-        /* Блок «Форматы работы» — сетка 2×2 */
+        /* Форматы 2×2 */
         .format-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -396,7 +393,7 @@
         /* Форма */
         .form-container {
             max-width: 600px; margin: 0 auto;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
             padding: 2.5rem;
             border-radius: var(--radius); box-shadow: var(--shadow);
